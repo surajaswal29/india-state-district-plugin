@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian State and District Picker</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div class="container perfect-center">
+      <div class="input-box">
+        <div class="state perfect-center">
+          <div class="close">
+            <label for="state">State/UT</label>
+            <select name="state" id="state">
+              <option value="state">State/UT</option>
+            </select>
+          </div>
+        </div>
+        <div class="district perfect-center">
+          <div class="close">
+            <label for="district">District</label>
+            <select name="district" id="district"></select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="state-district.js"></script>
+    <script defer>
+      stateDistrict('state', 'district');
+    </script>
+  </body>
+</html>
