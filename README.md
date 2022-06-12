@@ -1,2 +1,2 @@
 # india-state-district
-New Indin State and District Picker
+New Indian State and District Picker
