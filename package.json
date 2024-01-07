@@ -1,6 +1,6 @@
 {
   "name": "india-state-district",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "New Indian State and District Picker.\r This plugin will provide the functionality of choosing state and their respective districts from the dropdown.",
   "main": "index.js",
   "scripts": {
