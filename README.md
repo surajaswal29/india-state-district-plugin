@@ -1,5 +1,7 @@
 # India State and District
 
+![India Flag](india.png)
+
 This npm package provides functions to get the list of Indian states and districts.
 
 **Features**
