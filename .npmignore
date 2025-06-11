@@ -1,0 +1,37 @@
+# Source files
+src/
+!dist/
+!lib/
+
+# Development configs
+.gitignore
+.npmignore
+tsconfig.json
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# IDE files
+.vscode/
+.idea/
+
+# Test files
+__tests__/
+*.test.ts
+*.spec.ts
+
+# Build artifacts
+*.log
+.DS_Store
+
+# Documentation and assets
+docs/
+*.md
+india.png
+
+# Source maps
+*.map
+
+# Environment files
+.env* 
