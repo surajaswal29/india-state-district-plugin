@@ -1,142 +1,199 @@
 # 🇮🇳 India State District Plugin
 
-<div align="center">
-  <img src="./india.png" alt="India State District Plugin Banner" width="600px" />
-  
-  [![npm version](https://img.shields.io/npm/v/india-state-district-plugin.svg)](https://www.npmjs.com/package/india-state-district-plugin)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5.0.3-blue.svg)](https://www.typescriptlang.org/)
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+> **Note:** This is an educational project designed to demonstrate Indian geographical data handling. Feel free to use it for learning purposes.
 
-  <p>A lightweight, type-safe plugin for creating linked state and district dropdowns for Indian states. Built with TypeScript and zero dependencies! 🚀</p>
-</div>
+![npm version](https://img.shields.io/npm/v/india-state-district-plugin.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0.3-blue.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-## ✨ Features
+A lightweight, type-safe TypeScript utility package for handling Indian states and districts data.
 
-- 🔒 **Type-Safe**: Built with TypeScript for robust type checking and better developer experience
-- 🎨 **Modern UI**: Clean, responsive design that works across all devices
-- 🎯 **Zero Dependencies**: Lightweight and efficient with no external dependencies
-- 🛠️ **Customizable**: Easy styling with CSS variables to match your brand
-- 🔄 **Event Handling**: Built-in support for state and district change events
-- 📦 **Easy Integration**: Simple setup with default configurations
+## Overview
 
-## 🚀 Quick Start
+India State District Plugin is a zero-dependency solution that provides comprehensive data and utility functions for handling Indian geographical data (states and districts). Built with TypeScript, it offers a type-safe and developer-friendly way to work with Indian geographical data in your applications.
 
-### Installation
+## Features
+
+- ✨ **Type Safety** - Built with TypeScript for enhanced developer experience and code reliability
+- 🚀 **Zero Dependencies** - Lightweight implementation with no external dependencies
+- 📦 **Tree-Shakeable** - Import only what you need
+- 🔄 **Utility Functions** - Comprehensive set of functions for data manipulation
+- 🎯 **Framework Agnostic** - Use with any JavaScript framework or vanilla JS
+- 🛡️ **Modern Browsers** - Full support for all modern browsers
+
+## Installation
 
 ```bash
+# Using npm
 npm install india-state-district-plugin
-# or
+
+# Using yarn
 yarn add india-state-district-plugin
+
+# Using pnpm
+pnpm add india-state-district-plugin
 ```
 
-### Basic Usage
+## Usage
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="dist/style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="form-group">
-            <label for="state">State:</label>
-            <select id="state" class="form-control"></select>
-        </div>
-        <div class="form-group">
-            <label for="district">District:</label>
-            <select id="district" class="form-control"></select>
-        </div>
-    </div>
+### Basic Implementation
 
-    <script type="module">
-        import { IndiaStateDistrict } from 'india-state-district-plugin';
-        
-        const stateDistrict = new IndiaStateDistrict({
-            onChange: (state, district) => {
-                console.log('Selected State:', state);
-                console.log('Selected District:', district);
-            }
-        });
-    </script>
-</body>
-</html>
+```typescript
+import { IndiaStateDistrict } from 'india-state-district-plugin';
+
+// Initialize the utility
+const stateDistrict = new IndiaStateDistrict();
+
+// Get all states
+const states = stateDistrict.getAllStates();
+
+// Get districts for a specific state
+const districts = stateDistrict.getDistricts('Maharashtra');
+
+// Get current selections
+const currentState = stateDistrict.getState();
+const currentDistrict = stateDistrict.getDistrict();
 ```
 
-## 🛠️ Configuration Options
+### Node.js Implementation
 
-The plugin can be customized with the following options:
+```javascript
+const { IndiaStateDistrict } = require('india-state-district-plugin');
+
+// Initialize the utility
+const stateDistrict = new IndiaStateDistrict();
+
+// Get all states
+const states = stateDistrict.getAllStates();
+console.log('All States:', states);
+
+// Get districts for a specific state
+const districts = stateDistrict.getDistricts('Maharashtra');
+console.log('Districts in Maharashtra:', districts);
+
+// Set and get state/district
+stateDistrict.setState('Karnataka');
+stateDistrict.setDistrict('Bangalore');
+console.log('Current State:', stateDistrict.getState());
+console.log('Current District:', stateDistrict.getDistrict());
+```
+
+### React.js Implementation
+
+```tsx
+import React, { useState } from 'react';
+import { IndiaStateDistrict } from 'india-state-district-plugin';
+
+const LocationSelector: React.FC = () => {
+    const stateDistrict = new IndiaStateDistrict();
+    const [selectedState, setSelectedState] = useState('');
+    const [selectedDistrict, setSelectedDistrict] = useState('');
+    const [districts, setDistricts] = useState<string[]>([]);
+
+    const handleStateChange = (state: string) => {
+        setSelectedState(state);
+        setDistricts(stateDistrict.getDistricts(state));
+        setSelectedDistrict('');
+    };
+
+    return (
+        <div>
+            <select 
+                value={selectedState}
+                onChange={(e) => handleStateChange(e.target.value)}
+            >
+                <option value="">Select State</option>
+                {stateDistrict.getAllStates().map(state => (
+                    <option key={state} value={state}>{state}</option>
+                ))}
+            </select>
+
+            <select
+                value={selectedDistrict}
+                onChange={(e) => setSelectedDistrict(e.target.value)}
+                disabled={!selectedState}
+            >
+                <option value="">Select District</option>
+                {districts.map(district => (
+                    <option key={district} value={district}>{district}</option>
+                ))}
+            </select>
+        </div>
+    );
+};
+
+export default LocationSelector;
+```
+
+### API Methods
+
+| Method | Description | Return Type |
+|--------|-------------|-------------|
+| `getAllStates()` | Get list of all states | `string[]` |
+| `getDistricts(state: string)` | Get all districts for a state | `string[]` |
+| `getState()` | Get the currently selected state | `string` |
+| `getDistrict()` | Get the currently selected district | `string` |
+| `setState(state: string)` | Set the current state | `void` |
+| `setDistrict(district: string)` | Set the current district | `void` |
+| `isValidState(state: string)` | Check if state exists | `boolean` |
+| `isValidDistrict(state: string, district: string)` | Check if district exists in state | `boolean` |
+
+### Configuration Options
 
 ```typescript
 interface IndiaStateDistrictOptions {
-    stateSelectId?: string;      // ID of state select element (default: 'state')
-    districtSelectId?: string;   // ID of district select element (default: 'district')
-    defaultState?: string;       // Default state to select
-    defaultDistrict?: string;    // Default district to select
-    onChange?: (state: string, district: string) => void;  // Change event handler
+    // Initial state selection
+    defaultState?: string;       
+    
+    // Initial district selection
+    defaultDistrict?: string;    
+    
+    // Change event handler
+    onChange?: (state: string, district: string) => void;
 }
 ```
 
-## 📚 API Reference
+## Browser Support
 
-### Methods
+The package is tested and supported on all modern browsers:
 
-| Method | Description |
-|--------|-------------|
-| `getState()` | Returns the currently selected state |
-| `getDistrict()` | Returns the currently selected district |
-| `setState(state: string)` | Sets the current state and updates districts |
-| `setDistrict(district: string)` | Sets the current district |
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Opera (latest)
 
-## 🎨 Styling
+## Contributing
 
-Customize the look and feel using CSS variables:
-
-```css
-:root {
-  --primary-color: #4a90e2;
-  --border-color: #e1e1e1;
-  --text-color: #333;
-  --background-color: #fff;
-  --hover-color: #f5f5f5;
-  --focus-color: #2779bd;
-  --border-radius: 4px;
-  --spacing: 1rem;
-}
-```
-
-## 🌐 Browser Support
-
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
-- ✅ Opera (latest)
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
+We appreciate all contributions to improve India State District Plugin. Here's how you can help:
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create a feature branch (`git checkout -b feature/enhancement`)
+3. Make your changes
+4. Commit (`git commit -m 'Add enhancement'`)
+5. Push to the branch (`git push origin feature/enhancement`)
+6. Open a Pull Request
 
-## 📝 License
+Please ensure your PR adheres to the following guidelines:
+- Follow the existing code style
+- Add tests for new features
+- Update documentation as needed
+- Keep commits atomic and well-described
+
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Support
+## Support
 
-- Star this repository
-- Report issues
-- Submit Pull Requests
-- Spread the word
+- ⭐ Star this repository
+- 🐛 Report issues
+- 🤝 Submit pull requests
+- 📢 Share with others
 
 ---
 
-<div align="center">
-  Made with ❤️ by <a href="https://github.com/surajaswal29">Suraj Aswal</a>
-</div>
+_Developed with ❤️ by [Suraj Aswal](https://github.com/surajaswal29)_
+
+[Report Bug](https://github.com/surajaswal29/india-state-district-plugin/issues) · [Request Feature](https://github.com/surajaswal29/india-state-district-plugin/issues)
