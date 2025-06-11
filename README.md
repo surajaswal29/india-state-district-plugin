@@ -164,6 +164,10 @@ The package is tested and supported on all modern browsers:
 - Edge (latest)
 - Opera (latest)
 
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a list of changes and version history. We follow [Semantic Versioning](https://semver.org/) and document all notable changes following the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format.
+
 ## Contributing
 
 We appreciate all contributions to improve India State District Plugin. Here's how you can help:
