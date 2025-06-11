@@ -1,6 +1,5 @@
-// Indian States/ UT and Districts
-const india = {
-  AP: [
+{
+  "AP": [
     "Srikakulam",
     "Parvathipuram Manyam",
     "Vizianagaram",
@@ -25,9 +24,9 @@ const india = {
     "Sri SathyaYSR",
     "Annamayya",
     "Tirupati",
-    "Chittoor",
+    "Chittoor"
   ],
-  AR: [
+  "AR": [
     "Anjaw",
     "Changlang",
     "East Kameng",
@@ -53,9 +52,9 @@ const india = {
     "Upper Subansiri",
     "West Kameng",
     "West Siang",
-    "Itanagar City Complex",
+    "Itanagar City Complex"
   ],
-  AS: [
+  "AS": [
     "Bajali",
     "Baksa",
     "Barpeta",
@@ -90,9 +89,9 @@ const india = {
     "Tinsukia",
     "Udalguri",
     "West Karbi Anglong",
-    "Tamulpur",
+    "Tamulpur"
   ],
-  BR: [
+  "BR": [
     "Araria",
     "Arwal",
     "Aurangabad",
@@ -130,9 +129,9 @@ const india = {
     "Siwan",
     "Supaul",
     "Vaishali",
-    "West Champaran",
+    "West Champaran"
   ],
-  CG: [
+  "CG": [
     "Balod",
     "Baloda Bazar-Bhatapara",
     "Balrampur",
@@ -165,10 +164,10 @@ const india = {
     "Sukma",
     "Surajpur",
     "Surguja",
-    "Khairagarh-Chhuikhadan-Gandai",
+    "Khairagarh-Chhuikhadan-Gandai"
   ],
-  GA: ["North Goa", "South Goa"],
-  GJ: [
+  "GA": ["North Goa", "South Goa"],
+  "GJ": [
     "Ahmedabad",
     "Amreli",
     "Anand",
@@ -201,9 +200,9 @@ const india = {
     "Surendranagar",
     "Tapi",
     "Vadodara",
-    "Valsad",
+    "Valsad"
   ],
-  HR: [
+  "HR": [
     "Ambala",
     "Bhiwani",
     "Charkhi Dadri",
@@ -225,10 +224,23 @@ const india = {
     "Rohtak",
     "Sirsa",
     "Sonipat",
-    "Yamunanagar",
+    "Yamunanagar"
   ],
-  HP: ["Bilaspur", "Chamba", "Hamirpur", "Kangra", "Kinnaur", "Kullu", "Lahaul and Spiti", "Mandi", "Shimla", "Sirmaur", "Solan", "Una"],
-  JH: [
+  "HP": [
+    "Bilaspur",
+    "Chamba",
+    "Hamirpur",
+    "Kangra",
+    "Kinnaur",
+    "Kullu",
+    "Lahaul and Spiti",
+    "Mandi",
+    "Shimla",
+    "Sirmaur",
+    "Solan",
+    "Una"
+  ],
+  "JH": [
     "Bokaro",
     "Chatra",
     "Deoghar",
@@ -252,9 +264,9 @@ const india = {
     "Sahibganj",
     "Seraikela-Kharsawan",
     "Simdega",
-    "West Singhbhum",
+    "West Singhbhum"
   ],
-  KA: [
+  "KA": [
     "Bagalkot",
     "Bellary",
     "Belgaum",
@@ -285,10 +297,25 @@ const india = {
     "Uttara Kannada",
     "Vijayanagara",
     "Vijayapura",
-    "Yadgir",
+    "Yadgir"
   ],
-  KL: ["Alappuzha", "Ernakulam", "Idukki", "Kannur", "Kasaragod", "Kollam", "Kottayam", "Kozhikode", "Malappuram", "Palakkad", "Pathanamthitta", "Thrissur", "Thiruvananthapuram", "Wayanad"],
-  MP: [
+  "KL": [
+    "Alappuzha",
+    "Ernakulam",
+    "Idukki",
+    "Kannur",
+    "Kasaragod",
+    "Kollam",
+    "Kottayam",
+    "Kozhikode",
+    "Malappuram",
+    "Palakkad",
+    "Pathanamthitta",
+    "Thrissur",
+    "Thiruvananthapuram",
+    "Wayanad"
+  ],
+  "MP": [
     "Agar Malwa",
     "Alirajpur",
     "Anuppur",
@@ -343,9 +370,9 @@ const india = {
     "Tikamgarh",
     "Ujjain",
     "Umaria",
-    "Vidisha",
+    "Vidisha"
   ],
-  MH: [
+  "MH": [
     "Ahmednagar",
     "Akola",
     "Amravati",
@@ -381,10 +408,27 @@ const india = {
     "Thane",
     "Wardha",
     "Washim",
-    "Yavatmal",
+    "Yavatmal"
   ],
-  MN: ["Bishnupur", "Chandel", "Churachandpur", "Imphal East", "Imphal West", "Jiribam", "Kakching", "Kamjong", "Kangpokpi", "Noney", "Pherzawl", "Senapati", "Tamenglong", "Tengnoupal", "Thoubal", "Ukhrul"],
-  ML: [
+  "MN": [
+    "Bishnupur",
+    "Chandel",
+    "Churachandpur",
+    "Imphal East",
+    "Imphal West",
+    "Jiribam",
+    "Kakching",
+    "Kamjong",
+    "Kangpokpi",
+    "Noney",
+    "Pherzawl",
+    "Senapati",
+    "Tamenglong",
+    "Tengnoupal",
+    "Thoubal",
+    "Ukhrul"
+  ],
+  "ML": [
     "East Garo Hills",
     "East Khasi Hills",
     "East Jaintia Hills",
@@ -396,11 +440,40 @@ const india = {
     "South West Khasi Hills",
     "West Jaintia Hills",
     "West Garo Hills",
-    "West Khasi Hills",
+    "West Khasi Hills"
   ],
-  MZ: ["Aizawl", "Champhai", "Hnahthial", "Khawzawl", "Kolasib", "Lawngtlai", "Lunglei", "Mamit", "Saiha", "Saitual", "Serchhip"],
-  NL: ["Chümoukedima", "Dimapur", "Kiphire", "Kohima", "Longleng", "Mokokchung", "Mon", "Niuland", "Noklak", "Peren", "Phek", "Shamator", "Tseminyü", "Tuensang", "Wokha", "Zunheboto"],
-  OD: [
+  "MZ": [
+    "Aizawl",
+    "Champhai",
+    "Hnahthial",
+    "Khawzawl",
+    "Kolasib",
+    "Lawngtlai",
+    "Lunglei",
+    "Mamit",
+    "Saiha",
+    "Saitual",
+    "Serchhip"
+  ],
+  "NL": [
+    "Chümoukedima",
+    "Dimapur",
+    "Kiphire",
+    "Kohima",
+    "Longleng",
+    "Mokokchung",
+    "Mon",
+    "Niuland",
+    "Noklak",
+    "Peren",
+    "Phek",
+    "Shamator",
+    "Tseminyü",
+    "Tuensang",
+    "Wokha",
+    "Zunheboto"
+  ],
+  "OD": [
     "Angul",
     "Boudh (Bauda)",
     "Bhadrak",
@@ -430,9 +503,9 @@ const india = {
     "Rayagada",
     "Sambalpur",
     "Subarnapur (Sonepur)",
-    "Sundargarh",
+    "Sundargarh"
   ],
-  PB: [
+  "PB": [
     "Amritsar",
     "Barnala",
     "Bathinda",
@@ -455,9 +528,9 @@ const india = {
     "Sahibzada Ajit Singh Nagar",
     "Sangrur",
     "Shahid Bhagat Singh Nagar",
-    "Tarn Taran",
+    "Tarn Taran"
   ],
-  RJ: [
+  "RJ": [
     "Ajmer",
     "Alwar",
     "Bikaner",
@@ -490,10 +563,17 @@ const india = {
     "Sawai Madhopur",
     "Sirohi",
     "Tonk",
-    "Udaipur",
+    "Udaipur"
   ],
-  SK: ["East Sikkim", "North Sikkim", "Pakyong", "Soreng", "South Sikkim", "West Sikkim"],
-  TN: [
+  "SK": [
+    "East Sikkim",
+    "North Sikkim",
+    "Pakyong",
+    "Soreng",
+    "South Sikkim",
+    "West Sikkim"
+  ],
+  "TN": [
     "Ariyalur",
     "Chengalpattu",
     "Chennai",
@@ -531,9 +611,9 @@ const india = {
     "Tiruvannamalai",
     "Vellore",
     "Viluppuram",
-    "Virudhunagar",
+    "Virudhunagar"
   ],
-  TG: [
+  "TG": [
     "Adilabad",
     "Bhadradri Kothagudem",
     "Hanamkonda",
@@ -566,10 +646,19 @@ const india = {
     "Vikarabad",
     "Wanaparthy",
     "Warangal",
-    "Yadadri Bhuvanagiri",
+    "Yadadri Bhuvanagiri"
   ],
-  TR: ["Dhalai", "Gomati", "Khowai", "North Tripura", "Sepahijala", "South Tripura", "Unakoti", "West Tripura"],
-  UP: [
+  "TR": [
+    "Dhalai",
+    "Gomati",
+    "Khowai",
+    "North Tripura",
+    "Sepahijala",
+    "South Tripura",
+    "Unakoti",
+    "West Tripura"
+  ],
+  "UP": [
     "Agra",
     "Aligarh",
     "Allahabad",
@@ -644,10 +733,28 @@ const india = {
     "Sonbhadra",
     "Sultanpur",
     "Unnao",
-    "Varanasi",
+    "Varanasi"
   ],
-  UK: ["Almora", "Bageshwar", "Chamoli", "Champawat", "Dehradun", "Didihat", "Haridwar", "Kotdwar", "Nainital", "Pauri Garhwal", "Pithoragarh", "Ranikhet", "Rudraprayag", "Tehri Garhwal", "Udham Singh Nagar", "Uttarkashi", "Yamunotri"],
-  WB: [
+  "UK": [
+    "Almora",
+    "Bageshwar",
+    "Chamoli",
+    "Champawat",
+    "Dehradun",
+    "Didihat",
+    "Haridwar",
+    "Kotdwar",
+    "Nainital",
+    "Pauri Garhwal",
+    "Pithoragarh",
+    "Ranikhet",
+    "Rudraprayag",
+    "Tehri Garhwal",
+    "Udham Singh Nagar",
+    "Uttarkashi",
+    "Yamunotri"
+  ],
+  "WB": [
     "Alipurduar",
     "Bankura",
     "Paschim Bardhaman",
@@ -670,57 +777,47 @@ const india = {
     "Purba Medinipur",
     "Purulia",
     "South 24 Parganas",
-    "Uttar Dinajpur",
+    "Uttar Dinajpur"
   ],
-  AN: ["Nicobar", "North and Middle Andaman", "South Andaman"],
-  CH: ["Chandigarh "],
-  DH: ["Daman", "Diu", "Dadra and Nagar Haveli"],
-  JK: ["Anantnag", "Budgam", "Bandipore", "Baramulla", "Doda", "Ganderbal", "Jammu", "Kathua", "Kishtwar", "Kulgam", "Kupwara", "Poonch", "Pulwama", "Rajouri", "Ramban", "Reasi", "Samba", "Shopian", "Srinagar", "Udhampur"],
-  LA: ["Kargil", "Leh"],
-  LD: ["Lakshadweep"],
-  DL: ["Central Delhi", "East Delhi", "New Delhi", "North Delhi", "North East Delhi", "North West Delhi", "Shahdara district", "South Delhi", "South East Delhi", "South West Delhi", "West Delhi"],
-  PY: ["Karaikal", "Mahé", "Puducherry", "Yanam"],
+  "AN": ["Nicobar", "North and Middle Andaman", "South Andaman"],
+  "CH": ["Chandigarh "],
+  "DH": ["Daman", "Diu", "Dadra and Nagar Haveli"],
+  "JK": [
+    "Anantnag",
+    "Budgam",
+    "Bandipore",
+    "Baramulla",
+    "Doda",
+    "Ganderbal",
+    "Jammu",
+    "Kathua",
+    "Kishtwar",
+    "Kulgam",
+    "Kupwara",
+    "Poonch",
+    "Pulwama",
+    "Rajouri",
+    "Ramban",
+    "Reasi",
+    "Samba",
+    "Shopian",
+    "Srinagar",
+    "Udhampur"
+  ],
+  "LA": ["Kargil", "Leh"],
+  "LD": ["Lakshadweep"],
+  "DL": [
+    "Central Delhi",
+    "East Delhi",
+    "New Delhi",
+    "North Delhi",
+    "North East Delhi",
+    "North West Delhi",
+    "Shahdara district",
+    "South Delhi",
+    "South East Delhi",
+    "South West Delhi",
+    "West Delhi"
+  ],
+  "PY": ["Karaikal", "Mahé", "Puducherry", "Yanam"]
 }
-
-const indianStates = [
-  { state: "Andhra Pradesh", code: "AP" },
-  { state: "Arunachal Pradesh", code: "AR" },
-  { state: "Assam", code: "AS" },
-  { state: "Bihar", code: "BR" },
-  { state: "Chhattisgarh", code: "CG" },
-  { state: "Goa", code: "GA" },
-  { state: "Gujarat", code: "GJ" },
-  { state: "Haryana", code: "HR" },
-  { state: "Himachal Pradesh", code: "HP" },
-  { state: "Jharkhand", code: "JH" },
-  { state: "Karnataka", code: "KA" },
-  { state: "Kerala", code: "KL" },
-  { state: "Madhya Pradesh", code: "MP" },
-  { state: "Maharashtra", code: "MH" },
-  { state: "Manipur", code: "MN" },
-  { state: "Meghalaya", code: "ML" },
-  { state: "Mizoram", code: "MZ" },
-  { state: "Nagaland", code: "NL" },
-  { state: "Odisha", code: "OD" },
-  { state: "Punjab", code: "PB" },
-  { state: "Rajasthan", code: "RJ" },
-  { state: "Sikkim", code: "SK" },
-  { state: "Tamil Nadu", code: "TN" },
-  { state: "Telangana", code: "TG" },
-  { state: "Tripura", code: "TR" },
-  { state: "Uttar Pradesh", code: "UP" },
-  { state: "Uttarakhand", code: "UK" },
-  { state: "West Bengal", code: "WB" },
-  { state: "Andaman and Nicobar", code: "AN" },
-  { state: "Chandigarh", code: "CH" },
-  { state: "Dadra and Nagar Haveli and Daman and Diu", code: "DH" },
-  { state: "Jammu and Kashmir", code: "JK" },
-  { state: "Ladakh", code: "LA" },
-  { state: "Lakshadweep", code: "LD" },
-  { state: "New Delhi", code: "DL" },
-  { state: "Puducherry", code: "PY" },
-]
-
-exports.getIndiaState = () => indianStates
-
-exports.getIndiaDistrict = (code = "AP") => india[code]

@@ -1,12 +1,40 @@
 {
-  "name": "india-state-district",
-  "version": "1.0.2",
-  "description": "New Indian State and District Picker.\r This plugin will provide the functionality of choosing state and their respective districts from the dropdown.",
-  "main": "index.js",
+  "name": "india-state-district-plugin",
+  "version": "1.0.0",
+  "description": "A TypeScript plugin for India states and districts selection",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon state-district.js"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "lint": "eslint src --ext .ts",
+    "prepare": "npm run build"
   },
+  "keywords": [
+    "india",
+    "states",
+    "districts",
+    "typescript",
+    "select"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surajaswal29/india-state-district-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/surajaswal29/india-state-district-plugin/issues"
+  },
+  "homepage": "https://github.com/surajaswal29/india-state-district-plugin#readme"
 }

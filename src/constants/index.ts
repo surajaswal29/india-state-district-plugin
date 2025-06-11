@@ -1,0 +1,66 @@
+const indianStates = [
+  { state: "Andhra Pradesh", code: "AP" },
+  { state: "Arunachal Pradesh", code: "AR" },
+  { state: "Assam", code: "AS" },
+  { state: "Bihar", code: "BR" },
+  { state: "Chhattisgarh", code: "CG" },
+  { state: "Goa", code: "GA" },
+  { state: "Gujarat", code: "GJ" },
+  { state: "Haryana", code: "HR" },
+  { state: "Himachal Pradesh", code: "HP" },
+  { state: "Jharkhand", code: "JH" },
+  { state: "Karnataka", code: "KA" },
+  { state: "Kerala", code: "KL" },
+  { state: "Madhya Pradesh", code: "MP" },
+  { state: "Maharashtra", code: "MH" },
+  { state: "Manipur", code: "MN" },
+  { state: "Meghalaya", code: "ML" },
+  { state: "Mizoram", code: "MZ" },
+  { state: "Nagaland", code: "NL" },
+  { state: "Odisha", code: "OD" },
+  { state: "Punjab", code: "PB" },
+  { state: "Rajasthan", code: "RJ" },
+  { state: "Sikkim", code: "SK" },
+  { state: "Tamil Nadu", code: "TN" },
+  { state: "Telangana", code: "TG" },
+  { state: "Tripura", code: "TR" },
+  { state: "Uttar Pradesh", code: "UP" },
+  { state: "Uttarakhand", code: "UK" },
+  { state: "West Bengal", code: "WB" },
+  { state: "Andaman and Nicobar", code: "AN" },
+  { state: "Chandigarh", code: "CH" },
+  { state: "Dadra and Nagar Haveli and Daman and Diu", code: "DH" },
+  { state: "Jammu and Kashmir", code: "JK" },
+  { state: "Ladakh", code: "LA" },
+  { state: "Lakshadweep", code: "LD" },
+  { state: "New Delhi", code: "DL" },
+  { state: "Puducherry", code: "PY" },
+]
+
+export const DEFAULT_OPTIONS = {
+  stateSelectId: "state",
+  districtSelectId: "district",
+  placeholder: {
+    state: "Select State",
+    district: "Select District",
+  },
+  displayStateCode: false,
+  validation: {
+    required: false,
+  },
+}
+
+export const ERROR_MESSAGES = {
+  ELEMENTS_NOT_FOUND: "State or district select elements not found in the DOM",
+  INVALID_STATE:
+    "The specified state is not valid. Please provide a valid state name or state code",
+  INVALID_DISTRICT:
+    "The specified district is not valid for the selected state",
+  REQUIRED_FIELDS: "Both state and district selections are required",
+  STATE_REQUIRED: "State selection is required",
+  DISTRICT_REQUIRED: "District selection is required",
+  CUSTOM_VALIDATION: "The selection did not pass custom validation",
+  NO_STATE_SELECTED: "Please select a state first",
+  INVALID_STATE_CODE: "Invalid state code provided",
+  INITIALIZATION_ERROR: "Failed to initialize the state-district selector",
+}
