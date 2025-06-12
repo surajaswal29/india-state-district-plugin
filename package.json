@@ -1,24 +1,48 @@
 {
   "name": "india-state-district",
-  "version": "1.0.3",
-  "description": "A TypeScript plugin for India states and districts selection",
+  "version": "1.0.4",
+  "description": "A lightweight TypeScript library for handling Indian states and districts data with type safety and easy integration",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
     "lint": "eslint src --ext .ts",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean"
   },
   "keywords": [
     "india",
     "states",
     "districts",
     "typescript",
-    "select"
+    "select",
+    "location",
+    "geography",
+    "form",
+    "validation",
+    "indian-states",
+    "indian-districts",
+    "state-selector",
+    "district-selector",
+    "india-geography",
+    "india-locations",
+    "state-district",
+    "india-state-district",
+    "india-state-district-plugin",
+    "india-state-district-package"
   ],
-  "author": "",
+  "author": "Suraj Aswal",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.0",
@@ -31,10 +55,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/surajaswal29/india-state-district-plugin.git"
+    "url": "git+https://github.com/surajaswal29/india-state-district.git"
   },
   "bugs": {
-    "url": "https://github.com/surajaswal29/india-state-district-plugin/issues"
+    "url": "https://github.com/surajaswal29/india-state-district/issues"
   },
-  "homepage": "https://github.com/surajaswal29/india-state-district-plugin#readme"
+  "homepage": "https://github.com/surajaswal29/india-state-district#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
