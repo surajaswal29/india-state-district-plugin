@@ -3,10 +3,24 @@
 > **Note:** This is an educational project designed to demonstrate Indian
 > geographical data handling. Feel free to use it for learning purposes.
 
+<!-- Project Info -->
 ![npm version](https://img.shields.io/npm/v/india-state-district.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0.3-blue.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
+<!-- Build & Quality -->
+![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+![Last Commit](https://img.shields.io/github/last-commit/surajaswal29/india-state-district)
+![Open Issues](https://img.shields.io/github/issues/surajaswal29/india-state-district)
+
+<!-- Package Stats -->
+![Downloads](https://img.shields.io/npm/dm/india-state-district.svg)
+![Bundle Size](https://img.shields.io/bundlephobia/minzip/india-state-district)
+![Node.js](https://img.shields.io/node/v/india-state-district)
+
+<!-- Contributors -->
+![Contributors](https://img.shields.io/github/contributors/surajaswal29/india-state-district)
 
 A lightweight, type-safe TypeScript utility package for handling Indian states
 and districts data.
