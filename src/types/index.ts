@@ -40,6 +40,29 @@ export interface ValidationResult {
 
 export type FilterFunction = (state: State) => boolean;
 
+//<----- Geolocation Types ----->
+export interface GeolocationResult {
+  state: string;
+  stateCode: string;
+  district?: string;
+  latitude: number;
+  longitude: number;
+}
+
+export interface GeolocationOptions {
+  /** Enable high accuracy mode (uses more battery) */
+  enableHighAccuracy?: boolean;
+  /** Maximum time to wait for location (ms) */
+  timeout?: number;
+  /** Maximum age of cached position (ms) */
+  maximumAge?: number;
+}
+
+export interface GeolocationError {
+  code: "PERMISSION_DENIED" | "POSITION_UNAVAILABLE" | "TIMEOUT" | "NOT_SUPPORTED" | "REVERSE_GEOCODE_FAILED" | "STATE_NOT_FOUND";
+  message: string;
+}
+
 // Map of state codes to their full names
 export const STATE_NAMES: { [key: string]: string } = {
   AP: "Andhra Pradesh",

@@ -43,6 +43,8 @@ way to work with Indian geographical data in your applications.
   manipulation
 - 🎯 **Framework Agnostic** - Use with any JavaScript framework or vanilla JS
 - 🛡️ **Modern Browsers** - Full support for all modern browsers
+- 📍 **Geolocation Support** - Auto-detect user's state from browser location
+- 🧪 **Well Tested** - Comprehensive test suite with 32+ test cases
 
 ## Installation
 
@@ -68,6 +70,8 @@ import india, {
   getAllStateCodes,
   getCurrentState,
   getAllStatesWithDistricts,
+  detectStateFromLocation,
+  isGeolocationSupported,
 } from "india-state-district"
 
 // Get all states
@@ -84,6 +88,36 @@ const currentState = getCurrentState()
 
 // Get all states with their districts
 const allStatesWithDistricts = getAllStatesWithDistricts()
+```
+
+### Geolocation Usage
+
+```typescript
+import {
+  detectStateFromLocation,
+  isGeolocationSupported,
+} from "india-state-district"
+
+// Check if geolocation is supported
+if (isGeolocationSupported()) {
+  try {
+    const result = await detectStateFromLocation({
+      timeout: 5000,
+      enableHighAccuracy: true,
+    })
+
+    console.log(result.state) // "Karnataka"
+    console.log(result.stateCode) // "KA"
+    console.log(result.latitude) // 12.9716
+    console.log(result.longitude) // 77.5946
+  } catch (error) {
+    if (error.code === "PERMISSION_DENIED") {
+      console.log("User denied location access")
+    } else if (error.code === "STATE_NOT_FOUND") {
+      console.log("Location is outside India")
+    }
+  }
+}
 ```
 
 ### Advanced Usage (Custom Instance)
@@ -173,6 +207,37 @@ export default LocationSelector
 | `getCurrentState()`           | Get current state (from default instance) | None                | `State`                                        |
 | `getAllStatesWithDistricts()` | Get all states with their districts       | None                | `Array<{ state: State, districts: string[] }>` |
 
+#### Geolocation Functions
+
+| Function                            | Description                              | Arguments              | Returns                      |
+| ----------------------------------- | ---------------------------------------- | ---------------------- | ---------------------------- |
+| `detectStateFromLocation(options?)` | Auto-detect state from browser location  | `GeolocationOptions?`  | `Promise<GeolocationResult>` |
+| `isGeolocationSupported()`          | Check if browser supports geolocation    | None                   | `boolean`                    |
+
+#### Geolocation Types
+
+```typescript
+interface GeolocationResult {
+  state: string      // Full state name (e.g., "Karnataka")
+  stateCode: string  // State code (e.g., "KA")
+  district?: string  // District name (if available)
+  latitude: number   // User's latitude
+  longitude: number  // User's longitude
+}
+
+interface GeolocationOptions {
+  enableHighAccuracy?: boolean  // Use GPS (default: false)
+  timeout?: number              // Max wait time in ms (default: 10000)
+  maximumAge?: number           // Cache age in ms (default: 300000)
+}
+
+interface GeolocationError {
+  code: "PERMISSION_DENIED" | "POSITION_UNAVAILABLE" | "TIMEOUT" | 
+        "NOT_SUPPORTED" | "REVERSE_GEOCODE_FAILED" | "STATE_NOT_FOUND"
+  message: string
+}
+```
+
 #### Factory & Class
 
 - `createIndiaStateDistrict()` — Create a new instance for advanced use-cases
@@ -180,7 +245,7 @@ export default LocationSelector
 
 #### Types & Flag Utilities
 
-- `State`, `StateData` — TypeScript types
+- `State`, `StateData`, `GeolocationResult`, `GeolocationOptions`, `GeolocationError` — TypeScript types
 - `INDIA_FLAG_SVG`, `INDIA_FLAG_COLORS`, `getIndiaFlagSVG`,
   `getIndiaFlagDataUrl` — Flag utilities
 
